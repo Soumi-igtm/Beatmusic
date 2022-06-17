@@ -1,0 +1,76 @@
+{
+  "project_info": {
+    "project_number": "460531610317",
+    "project_id": "beatwind-music-app",
+    "storage_bucket": "beatwind-music-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:460531610317:android:0043fa1e31e2aaf6abef84",
+        "android_client_info": {
+          "package_name": "com.shaderbytes.beatmusic"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "460531610317-duksaoifhgaebfd2mk3n94kbjptnv2h7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCwUMnCQ_Mxcjo7w9fqifWvm6THtqqI6_E"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "460531610317-duksaoifhgaebfd2mk3n94kbjptnv2h7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:460531610317:android:a628826ed04a24f5abef84",
+        "android_client_info": {
+          "package_name": "com.shaderbytes.beatwind"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "460531610317-h7okil3fv1ota4cfdd2gatr56df5bd17.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.shaderbytes.beatwind",
+            "certificate_hash": "4abb3c626a283b4a21ff9c299090a2b1952f01ee"
+          }
+        },
+        {
+          "client_id": "460531610317-duksaoifhgaebfd2mk3n94kbjptnv2h7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCwUMnCQ_Mxcjo7w9fqifWvm6THtqqI6_E"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "460531610317-duksaoifhgaebfd2mk3n94kbjptnv2h7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
