@@ -20,7 +20,7 @@ class _StatisticsState extends State<Statistics> {
       physics: const BouncingScrollPhysics(),
       shrinkWrap: true,
       children: [
-        Rails.instance.buildTrending(context, size),
+        Rails.instance.buildStatistics(context, size),
         customDivider(),
         headingText(text: "No data found",
             fontWeight: FontWeight.bold,
