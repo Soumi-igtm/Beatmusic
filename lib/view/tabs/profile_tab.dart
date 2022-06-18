@@ -1,4 +1,8 @@
 import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
+
+import '../../ui/custom_colors.dart';
+
 
 class Profile extends StatefulWidget {
   const Profile({Key? key}) : super(key: key);
@@ -10,6 +14,23 @@ class Profile extends StatefulWidget {
 class _ProfileState extends State<Profile> {
   @override
   Widget build(BuildContext context) {
-    return Container();
+
+    return Scaffold(
+      backgroundColor: kBackgroundColor,
+      appBar: AppBar(
+        leading: BackButton(),
+        backgroundColor: kBackgroundColor,
+        actions: [
+        ],
+      ),
+      body: ListView(
+        physics: BouncingScrollPhysics(),
+        children: [
+          ProfileWidget(
+            imagePath: user.imagePath
+          ),
+        ],
+      ),
+    );
   }
 }
