@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 
 import '../../ui/common.dart';
@@ -18,16 +17,17 @@ class _HomeTabState extends State<HomeTab> {
       padding: const EdgeInsets.all(20),
       shrinkWrap: true,
       children: [
-        Rails.instance.buildTopPicks(context),
-        SizedBox(height: 15,),
-        Text("This is where the musical journey starts",
-          style: TextStyle(
-            fontSize: 30,
-            fontWeight: FontWeight.bold,
-            color: Colors.white,
-            fontStyle: FontStyle.italic,
-          ),
+        Rails.instance.buildMyFavs(context),
+        const SizedBox(height: 15),
+        headingText(
+          text: "This is where the musical journey starts",
+          fontSize: 30,
+          fontStyle: FontStyle.italic,
+          textAlign: TextAlign.center,
+          fontWeight: FontWeight.bold,
         ),
+        customDivider(),
+        Rails.instance.buildRecentRecordings(context),
       ],
     );
   }

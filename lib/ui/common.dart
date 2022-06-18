@@ -35,11 +35,12 @@ Widget headingText(
       Color fontColor = Colors.white,
       double fontSize = 20,
       FontWeight fontWeight = FontWeight.bold,
+      FontStyle fontStyle = FontStyle.normal,
       TextAlign textAlign = TextAlign.start}) =>
     Text(
       text,
       textAlign: textAlign,
-      style: GoogleFonts.montserrat(fontSize: fontSize, letterSpacing: 01, fontWeight: fontWeight, color: fontColor),
+      style: GoogleFonts.montserrat(fontSize: fontSize, letterSpacing: 01, fontWeight: fontWeight, color: fontColor, fontStyle: fontStyle),
     );
 
 Widget customDivider() => const Divider(color: kWhiteColor, thickness: 0.2, height: 30);
