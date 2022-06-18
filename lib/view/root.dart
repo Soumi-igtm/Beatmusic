@@ -51,7 +51,7 @@ class _RootState extends State<Root> {
             _currentIndex = value;
           });
         },
-        selectedItemColor: kPrimaryColor,
+        selectedItemColor: kPrimaryTextColor,
         unselectedItemColor: Colors.grey,
         showUnselectedLabels: true,
         selectedLabelStyle: GoogleFonts.comfortaa(fontSize: 10),
