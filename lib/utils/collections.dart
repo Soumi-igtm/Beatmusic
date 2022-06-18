@@ -6,3 +6,4 @@ CollectionReference musicsCollection = FirebaseFirestore.instance.collection("mu
 CollectionReference playlistsCollection = FirebaseFirestore.instance.collection("playlists");
 CollectionReference artistsCollection = FirebaseFirestore.instance.collection("artists");
 CollectionReference creatorsCollection = FirebaseFirestore.instance.collection("creators");
+CollectionReference statisticsCollection = FirebaseFirestore.instance.collection("Statistics");

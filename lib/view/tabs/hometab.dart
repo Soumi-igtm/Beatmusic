@@ -23,7 +23,7 @@ class _HomeTabState extends State<HomeTab> {
           shrinkWrap: true,
           children: [
             Rails.instance.buildMyFavs(context),
-            const SizedBox(height: 15),
+
             headingText(
               text: "This is where the musical journey starts",
               fontSize: 30,

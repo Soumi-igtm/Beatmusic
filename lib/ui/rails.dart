@@ -48,6 +48,7 @@ class Rails {
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             bodyText(text: dataList[index]["title"], fontSize: 14, fontColor: Colors.grey),
+
                             ClipRRect(
                               borderRadius: BorderRadius.circular(15),
                               child: Stack(
@@ -150,4 +151,121 @@ class Rails {
           );
         });
   }
+  Widget buildTrending(BuildContext context, Size size) {
+    return StreamBuilder<QuerySnapshot>(
+        stream: musicsCollection.where("active", isEqualTo: true).where("browseBanner", isEqualTo: true).orderBy("browseOrder").snapshots(),
+        builder: (context, snapshot) {
+          if (!snapshot.hasData) {
+            return SizedBox(
+              height: 313,
+              child: Loaders.instance.customSquareListLoader(6),
+            );
+          }
+          List<DocumentSnapshot> dataList = snapshot.data!.docs;
+          if (snapshot.hasData && dataList.isEmpty) {
+            return const SizedBox();
+          }
+          return SizedBox(
+            height: 313,
+            child: ListView.builder(
+                itemCount: dataList.length,
+                scrollDirection: Axis.horizontal,
+                physics: const ClampingScrollPhysics(),
+                itemBuilder: (context, index) {
+                  return SizedBox(
+                    width: size.width - 50,
+                    height: 500,
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Padding(
+                          padding: const EdgeInsets.only(top: 8.0),
+                          child: bodyText(text: dataList[index]["title"], fontSize: 25, fontWeight: FontWeight.normal),
+                        ),
+                        AutoSizeText(
+                          dataList[index]["artists"].join(", "),
+                          minFontSize: 15,
+                          maxLines: 1,
+                          style: GoogleFonts.montserrat(fontWeight: FontWeight.w400, fontSize: 16, color: Colors.grey),
+                        ),
+                        const SizedBox(height: 5),
+                        ClipRRect(
+                          borderRadius: BorderRadius.circular(12),
+                          child: Stack(
+                            children: [
+                              CachedNetworkImage(
+                                imageUrl: dataList[index]["banner"],
+                                placeholder: (context, s) => Image.asset("assets/placeholder1.jpg"),
+                                fit: BoxFit.cover,
+                                height: 250,
+                              ),
+
+                            ],
+                          ),
+                        ),
+                      ],
+                    ),
+                  );
+                }),
+          );
+        });
+  }
+
+  Widget buildStatistics(BuildContext context, Size size) {
+    return StreamBuilder<QuerySnapshot>(
+        stream: statisticsCollection.where("active", isEqualTo: true).where("browseBanner", isEqualTo: true).orderBy("browseOrder").snapshots(),
+        builder: (context, snapshot) {
+          if (!snapshot.hasData) {
+            return SizedBox(
+              height: 313,
+              child: Loaders.instance.customSquareListLoader(6),
+            );
+          }
+          List<DocumentSnapshot> dataList = snapshot.data!.docs;
+          if (snapshot.hasData && dataList.isEmpty) {
+            return const SizedBox();
+          }
+          return SizedBox(
+            height: 313,
+            child: ListView.builder(
+                itemCount: dataList.length,
+                scrollDirection: Axis.horizontal,
+                physics: const ClampingScrollPhysics(),
+                itemBuilder: (context, index) {
+                  return SizedBox(
+                    width: size.width - 50,
+                    height: 500,
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Padding(
+                          padding: const EdgeInsets.only(top: 8.0),
+                          child: bodyText(text: dataList[index]["title"], fontSize: 25, fontWeight: FontWeight.normal),
+                        ),
+
+                        const SizedBox(height: 5),
+                        ClipRRect(
+                          borderRadius: BorderRadius.circular(12),
+                          child: Stack(
+                            children: [
+                              CachedNetworkImage(
+                                imageUrl: dataList[index]["banner"],
+
+                                fit: BoxFit.cover,
+                                height: 250,
+                              ),
+
+                            ],
+                          ),
+                        ),
+                      ],
+                    ),
+                  );
+                }),
+          );
+        });
+  }
+
 }
+
+
