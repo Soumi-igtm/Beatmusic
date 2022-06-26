@@ -127,13 +127,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "1.0.5"
-  decimal:
+  equatable:
     dependency: transitive
     description:
-      name: decimal
+      name: equatable
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "2.2.0"
+    version: "2.0.3"
   fake_async:
     dependency: transitive
     description:
@@ -239,6 +239,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "2.4.2"
+  fl_chart:
+    dependency: "direct main"
+    description:
+      name: fl_chart
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "0.55.0"
   flutter:
     dependency: "direct main"
     description: flutter
@@ -265,13 +272,6 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "3.3.0"
-  flutter_charts:
-    dependency: "direct main"
-    description:
-      name: flutter_charts
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "0.5.0"
   flutter_lints:
     dependency: "direct dev"
     description:
@@ -525,20 +525,48 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "6.0.3"
-  quiver:
-    dependency: transitive
+  record:
+    dependency: "direct main"
     description:
-      name: quiver
+      name: record
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "3.1.0"
-  rational:
+    version: "4.1.1"
+  record_linux:
     dependency: transitive
     description:
-      name: rational
+      name: record_linux
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "2.2.0"
+    version: "0.1.0"
+  record_macos:
+    dependency: transitive
+    description:
+      name: record_macos
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "0.1.0"
+  record_platform_interface:
+    dependency: transitive
+    description:
+      name: record_platform_interface
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "0.3.0"
+  record_web:
+    dependency: transitive
+    description:
+      name: record_web
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "0.3.1"
+  record_windows:
+    dependency: transitive
+    description:
+      name: record_windows
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "0.4.3"
   remixicon:
     dependency: "direct main"
     description:
@@ -628,13 +656,6 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "0.4.9"
-  tuple:
-    dependency: transitive
-    description:
-      name: tuple
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "2.0.0"
   typed_data:
     dependency: transitive
     description:

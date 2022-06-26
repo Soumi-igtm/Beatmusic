@@ -1,8 +1,6 @@
-import 'dart:ffi';
-
 import 'package:beatmusic/ui/custom_colors.dart';
+import 'package:beatmusic/view/tabs/create_tab.dart';
 import 'package:beatmusic/view/tabs/hometab.dart';
-import 'package:beatmusic/view/tabs/profile_tab.dart';
 import 'package:beatmusic/view/tabs/search_tab.dart';
 import 'package:beatmusic/view/tabs/statistics_tab.dart';
 import 'package:beatmusic/view/tabs/trending%20tab.dart';
@@ -21,7 +19,7 @@ class Root extends StatefulWidget {
 class _RootState extends State<Root> {
 
   int _currentIndex = 0;
-  List<String> headingList = ["My Music", "Statistics", "Trending", "Profile","Search"];
+  List<String> headingList = ["My Music", "Statistics", "Create", "Trending","Search"];
 
   @override
   Widget build(BuildContext context) {
@@ -36,11 +34,11 @@ class _RootState extends State<Root> {
       ),
       body: IndexedStack(
         index: _currentIndex,
-        children: const [
+        children:  const [
           HomeTab(),
           Statistics(),
+          CreateTab(uid: ""),
           Trending(),
-          Profile(),
           Search()
         ],
       ),
@@ -68,15 +66,16 @@ class _RootState extends State<Root> {
             backgroundColor: Colors.black,
           ),
           BottomNavigationBarItem(
-            icon: Image.asset("assets/icons/trending-topic.png", width: 25, color: _currentIndex == 2 ? kPrimaryTextColor : Colors.grey),
-            label: "Trending",
+            icon: Icon(Icons.add_circle, size: 26, color: _currentIndex == 2 ? kPrimaryTextColor : Colors.grey),
+            label: "Create",
             backgroundColor: Colors.black,
           ),
           BottomNavigationBarItem(
-            icon: Image.asset("assets/icons/user.png", width: 25, color: _currentIndex == 3 ? kPrimaryTextColor : Colors.grey),
-            label: "Profile",
+            icon: Image.asset("assets/icons/trending-topic.png", width: 25, color: _currentIndex == 3 ? kPrimaryTextColor : Colors.grey),
+            label: "Trending",
             backgroundColor: Colors.black,
           ),
+
           BottomNavigationBarItem(
             icon: Image.asset("assets/icons/search.png", width: 25, color: _currentIndex == 4 ? kPrimaryTextColor : Colors.grey),
             label: "Search",

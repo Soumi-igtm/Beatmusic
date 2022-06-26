@@ -211,61 +211,6 @@ class Rails {
         });
   }
 
-  Widget buildStatistics(BuildContext context, Size size) {
-    return StreamBuilder<QuerySnapshot>(
-        stream: statisticsCollection.where("active", isEqualTo: true).where("browseBanner", isEqualTo: true).orderBy("browseOrder").snapshots(),
-        builder: (context, snapshot) {
-          if (!snapshot.hasData) {
-            return SizedBox(
-              height: 313,
-              child: Loaders.instance.customSquareListLoader(6),
-            );
-          }
-          List<DocumentSnapshot> dataList = snapshot.data!.docs;
-          if (snapshot.hasData && dataList.isEmpty) {
-            return const SizedBox();
-          }
-          return SizedBox(
-            height: 313,
-            child: ListView.builder(
-                itemCount: dataList.length,
-                scrollDirection: Axis.horizontal,
-                physics: const ClampingScrollPhysics(),
-                itemBuilder: (context, index) {
-                  return SizedBox(
-                    width: size.width - 50,
-                    height: 500,
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Padding(
-                          padding: const EdgeInsets.only(top: 8.0),
-                          child: bodyText(text: dataList[index]["title"], fontSize: 25, fontWeight: FontWeight.normal),
-                        ),
-
-                        const SizedBox(height: 5),
-                        ClipRRect(
-                          borderRadius: BorderRadius.circular(12),
-                          child: Stack(
-                            children: [
-                              CachedNetworkImage(
-                                imageUrl: dataList[index]["banner"],
-
-                                fit: BoxFit.cover,
-                                height: 250,
-                              ),
-
-                            ],
-                          ),
-                        ),
-                      ],
-                    ),
-                  );
-                }),
-          );
-        });
-  }
-
 }
 
 
