@@ -38,6 +38,7 @@ dependencies:
   flutter_speed_dial: ^6.0.0
   fl_chart: ^0.55.0
   record: ^4.1.1
+  siri_wave: ^0.2.1
 
 
 dev_dependencies:

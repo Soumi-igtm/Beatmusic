@@ -39,7 +39,7 @@ class _RootState extends State<Root> {
           Statistics(),
           CreateTab(uid: ""),
           Trending(),
-          Search()
+          SearchTab(),
         ],
       ),
       bottomNavigationBar: BottomNavigationBar(

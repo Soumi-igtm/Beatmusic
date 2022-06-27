@@ -29,7 +29,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return  MaterialApp(
         debugShowCheckedModeBanner: false,
-        title: "Beat Wind",
+        title: "Beatwind Artists",
         darkTheme: ThemeData(
             brightness: Brightness.dark,
             visualDensity: VisualDensity.adaptivePlatformDensity,

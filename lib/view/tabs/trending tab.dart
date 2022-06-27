@@ -22,12 +22,11 @@ class _TrendingState extends State<Trending> {
       physics: const BouncingScrollPhysics(),
       shrinkWrap: true,
       children: [
-        Rails.instance.buildTrending(context, size),
+        Rails.instance.buildEditorPicks(context),
         customDivider(),
-        headingText(text: "Top 10",
-          fontWeight: FontWeight.bold,
-          fontSize: 30
-        ),
+        Rails.instance.buildTrending(context),
+        customDivider(),
+        Rails.instance.buildPopularArtists(context),
       ],
     );
   }
